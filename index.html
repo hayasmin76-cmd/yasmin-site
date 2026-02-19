@@ -3,286 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יסמין חיים - נדל"ן בקריות</title>
+    <title>דירת גן יוקרתית בנהריה - רחוב פינסקר</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Assistant', sans-serif;
             scroll-behavior: smooth;
         }
-        .bg-pearl {
-            background-color: #fdfbf7;
-            background-image: radial-gradient(#f3eee5 0.5px, transparent 0.5px);
-            background-size: 20px 20px;
-        }
-        .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        .hero-section {
+            background-color: #1e293b;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+                              url('https://i.ibb.co/bj1064KS/IMG-20250429-WA0005.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            height: 80vh;
         }
-        .bg-gold { background-color: #D4AF37; }
-        .bg-gold:hover { background-color: #B8962E; }
-        .text-gold { color: #D4AF37; }
-        .border-gold { border-color: #D4AF37; }
-        
-        .pro-card {
-            background: white;
-            border: 1px solid #f3eee5;
-            transition: all 0.3s ease;
+        .gallery-img {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .pro-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
-            border-color: #D4AF37;
+        .gallery-img:hover {
+            transform: scale(1.03);
+            filter: brightness(1.05);
         }
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 1rem;
+        .image-overlay-text {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
         }
-        .logo-img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
-        .footer-logo {
-            height: 60px;
-            width: auto;
-            margin: 0 auto;
-            filter: grayscale(1) brightness(2);
-            opacity: 0.6;
-        }
-        .testimonial-card {
-            background: white;
-            border-right: 4px solid #D4AF37;
-        }
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        .profile-img-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #3b82f6;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body class="bg-pearl text-gray-800">
-
-    <!-- Header -->
-    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <div class="text-2xl font-bold tracking-tight text-gray-900 flex items-center gap-2">
-                    <span class="bg-gold text-white px-2 py-1 rounded">YH</span> יסמין חיים
-                </div>
-                <div class="h-8 w-[1px] bg-gray-200"></div>
-                <div class="flex items-center">
-                    <img src="https://i.ibb.co/6JV63YMT/logo.png" alt="לוגו שמול נדלן" class="logo-img" onerror="this.style.display='none'">
-                </div>
-            </div>
-            <nav class="hidden md:flex space-x-reverse space-x-8 font-medium">
-                <a href="#about-me" class="hover:text-[#D4AF37] transition">קצת עליי</a>
-                <a href="#professional-network" class="hover:text-[#D4AF37] transition">מעטפת מקצועית</a>
-                <a href="#testimonials" class="hover:text-[#D4AF37] transition">המלצות</a>
-                <a href="#contact" class="bg-gold text-white px-5 py-2 rounded-full hover:shadow-lg transition">דברו איתי</a>
-            </nav>
-        </div>
-    </header>
+<body class="bg-slate-50 text-gray-900 text-right">
 
     <!-- Hero Section -->
-    <section class="hero-bg h-screen flex items-center justify-center text-center text-white pt-16">
-        <div class="max-w-4xl px-6">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-shadow">המומחית שלך לנדל"ן בקריות</h1>
-            <p class="text-xl md:text-2xl mb-10 text-gray-100 leading-relaxed text-shadow">
-                ליווי מקצועי ואישי על ידי יסמין חיים - יועצת נדל"ן<br>
-                מוכרים או קונים נכס בקריות? הגעתם למקום הנכון.
-            </p>
+    <header class="hero-section flex flex-col items-center justify-center text-white text-center px-4 relative">
+        <div class="z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-2xl">דירת גן יוקרתית בנהריה</h1>
+            <p class="text-xl md:text-2xl mb-2 font-light drop-shadow-lg">רחוב פינסקר המבוקש 🌿</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl opacity-95 drop-shadow-md">לוקיישן מנצח | דקה מהגעתון | 4 דקות מהים</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-gold text-white px-8 py-4 rounded-lg text-lg font-bold hover:scale-105 transition-transform shadow-xl text-center">תיאום פגישת ייעוץ חינם</a>
-                <a href="tel:0509004297" class="bg-white/20 backdrop-blur-sm border border-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-white/30 transition text-center flex items-center justify-center gap-2">
-                    050-9004297
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-xl text-lg">
+                    תאמו סיור בנכס
+                </a>
+                <a href="tel:0509004297" class="bg-white/10 backdrop-blur-md text-white border-2 border-white/50 font-bold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-blue-900 text-lg flex items-center justify-center">
+                    <span class="ml-2">📞</span> 050-9004297
                 </a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- About Me Section -->
-    <section id="about-me" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/3">
-                    <div class="relative">
-                        <div class="absolute -inset-4 border-2 border-[#D4AF37]/30 rounded-2xl"></div>
-                        <div class="w-full aspect-[4/5] rounded-2xl bg-gray-50 border-4 border-gold flex items-center justify-center shadow-2xl relative overflow-hidden">
-                             <img src="https://i.ibb.co/LdGP8CxT/yasmin.jpg" alt="יסמין חיים" class="profile-img" onerror="this.parentElement.innerHTML='<div class=\'text-gray-300 italic\'>[תמונת פרופיל יסמין חיים]</div>'">
-                        </div>
-                        <div class="absolute -bottom-4 -left-4 bg-gold text-white px-4 py-2 rounded-lg font-bold shadow-lg text-sm">
-                            יסמין חיים
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-2/3 text-right">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900 italic">"הבית שלכם, המקצועיות שלי"</h2>
-                    <h2 class="text-3xl font-bold mb-2 text-gray-900">נעים להכיר, יסמין חיים</h2>
-                    <p class="text-[#D4AF37] font-bold text-xl mb-6">13 שנות ניסיון בנדל"ן בקריות</p>
-                    <div class="space-y-4 text-lg text-gray-700 leading-relaxed">
-                        <p>
-                            אני גאה להיות חלק מצוות המומחים של משרד <strong>"שמול נדל"ן"</strong>, הממוקם בכתובת <strong>משה גושן 72, קרית מוצקין</strong>. ב-13 השנים האחרונות ליוויתי מאות משפחות ומשקיעים בדרך לעסקאות הנדל"ן החשובות בחייהם.
-                        </p>
-                        <p>
-                            הניסיון שצברתי מאפשר לי להכיר כל רחוב, כל שכונה וכל שינוי במחירי השוק בקריות. המטרה שלי היא לא רק למכור או לקנות נכס, אלא להעניק לכם שקט נפשי וביטחון מלא לאורך כל הדרך.
-                        </p>
-                    </div>
-                </div>
+    <!-- Property Highlights -->
+    <section class="py-10 bg-white shadow-xl relative -mt-12 mx-4 md:mx-auto max-w-5xl rounded-2xl z-20 border-b-4 border-blue-600">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-x-reverse divide-gray-100">
+            <div>
+                <span class="block text-3xl font-extrabold text-blue-700">4</span>
+                <span class="text-gray-500 font-medium text-base">חדרים</span>
+            </div>
+            <div>
+                <span class="block text-3xl font-extrabold text-blue-700">125</span>
+                <span class="text-gray-500 font-medium text-base">מ"ר בנוי</span>
+            </div>
+            <div>
+                <span class="block text-3xl font-extrabold text-blue-700">50</span>
+                <span class="text-gray-500 font-medium text-base">מ"ר גינה</span>
+            </div>
+            <div>
+                <span class="block text-3xl font-extrabold text-blue-700">ענקית</span>
+                <span class="text-gray-500 font-medium text-base">סוויטת הורים</span>
             </div>
         </div>
     </section>
 
-    <!-- Professional Network Section -->
-    <section id="professional-network" class="py-20 bg-[#f8f4eb] text-right border-t border-gold/5">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-6 text-gray-900 text-center">מעטפת מקצועית מלאה</h2>
-            <div class="max-w-3xl mx-auto mb-12 text-center">
-                <p class="text-xl text-gray-700 leading-relaxed">
-                    כדי להבטיח לכם שקט נפשי וביטחון מלא בכל שלב, אני מעמידה לרשותכם רשת ענפה של אנשי מקצוע מובילים שעובדים איתי בסינרגיה מלאה:
+    <!-- Detailed Features & Gallery -->
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-slate-800 border-r-4 border-blue-600 pr-4">מפרט הנכס</h2>
+                <p class="text-lg leading-relaxed text-gray-700 font-light">
+                    נכס איכותי ונדיר במרכז נהריה, ברחוב שקט ומבוקש. מושלם למי שמחפש רמה אחרת של מגורים המשלבים נוחות מודרנית עם גינה פרטית ירוקה.
                 </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <span class="bg-blue-50 p-2 rounded-lg text-blue-600 ml-3 text-lg">🏡</span>
+                        <span class="text-gray-800 font-medium text-base">סוויטת הורים ענקית</span>
+                    </div>
+                    <div class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <span class="bg-blue-50 p-2 rounded-lg text-blue-600 ml-3 text-lg">🚽</span>
+                        <span class="text-gray-800 font-medium text-base">3 חדרי שירותים מעוצבים</span>
+                    </div>
+                    <div class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <span class="bg-blue-50 p-2 rounded-lg text-blue-600 ml-3 text-lg">📦</span>
+                        <span class="text-gray-800 font-medium text-base">מחסן ענק וחניה תת קרקעית</span>
+                    </div>
+                    <div class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <span class="bg-blue-50 p-2 rounded-lg text-blue-600 ml-3 text-lg">🛡️</span>
+                        <span class="text-gray-800 font-medium text-base">ממ״ד תיקני ובניין חדיש</span>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-2xl border-r-4 border-blue-500 shadow-inner mt-4">
+                    <h3 class="font-bold text-blue-900 text-xl mb-2 flex items-center">
+                        <span class="ml-2">📍</span> לוקיישן ללא תחרות
+                    </h3>
+                    <p class="text-blue-800 text-base leading-relaxed">
+                        ממוקם בלב הפועם של נהריה. במרחק דקת הליכה מהגעתון התוסס וכ-4 דקות בלבד מקו החוף המרהיב. השילוב האידיאלי בין שקט פסטורלי לנגישות מקסימלית.
+                    </p>
+                </div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="pro-card p-8 rounded-2xl shadow-sm">
-                    <div class="text-gold mb-6 flex justify-center">
-                        <svg class="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">עורכי דין</h3>
-                    <p class="text-gray-600 leading-relaxed text-right">התמחות במקרקעין לביצוע עסקאות בטוחות ומהירות, תוך הקפדה על כל ההיבטים המשפטיים של העסקה.</p>
+            <!-- Compact & Organized Gallery Grid -->
+            <div class="grid grid-cols-2 gap-3">
+                <div class="col-span-2 relative overflow-hidden rounded-2xl shadow-lg border-2 border-white group">
+                    <img src="https://i.ibb.co/bj1064KS/IMG-20250429-WA0005.jpg" alt="גינה פרטית" class="w-full h-56 object-cover gallery-img">
+                    <div class="absolute bottom-2 right-2 image-overlay-text text-white px-3 py-1 rounded-lg text-xs font-bold shadow-lg">הגינה הפרטית שלכם</div>
                 </div>
-                <div class="pro-card p-8 rounded-2xl shadow-sm">
-                    <div class="text-gold mb-6 flex justify-center">
-                        <svg class="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900 text-right">יועצי משכנתאות</h3>
-                    <p class="text-gray-600 leading-relaxed text-right">תכנון פיננסי חכם למיצוי מקסימלי של תנאי המימון שלכם והשגת הריביות הטובות ביותר בשוק.</p>
+                
+                <div class="relative overflow-hidden rounded-2xl shadow-md border-2 border-white group">
+                    <img src="https://i.ibb.co/Zy5whCs/IMG-20250429-WA0004.jpg" alt="סלון מרווח" class="w-full h-36 object-cover gallery-img">
+                    <div class="absolute bottom-2 right-2 image-overlay-text text-white px-2 py-1 rounded-md text-[10px] font-bold">חלל אירוח מרווח</div>
                 </div>
-                <div class="pro-card p-8 rounded-2xl shadow-sm">
-                    <div class="text-gold mb-6 flex justify-center">
-                        <svg class="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900 text-right">שמאים מוסמכים</h3>
-                    <p class="text-gray-600 leading-relaxed text-right">הערכות שווי מדויקות המוכרות על ידי כל המוסדות הפיננסיים, כדי שתדעו בדיוק מה ערך הנכס שלכם.</p>
+
+                <div class="relative overflow-hidden rounded-2xl shadow-md border-2 border-white group">
+                    <img src="https://i.ibb.co/JFrPqzwH/IMG-20250429-WA0001.jpg" alt="פינת ישיבה מקורה" class="w-full h-36 object-cover gallery-img">
+                    <div class="absolute bottom-2 right-2 image-overlay-text text-white px-2 py-1 rounded-md text-[10px] font-bold">פינת אירוח מקורה</div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl shadow-md border-2 border-white group">
+                    <img src="https://i.ibb.co/Y7fxnYdd/IMG-20250429-WA0003.jpg" alt="מטבח מעוצב" class="w-full h-36 object-cover gallery-img">
+                    <div class="absolute bottom-2 right-2 image-overlay-text text-white px-2 py-1 rounded-md text-[10px] font-bold">עיצוב מודרני</div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl shadow-md border-2 border-white group">
+                    <img src="https://i.ibb.co/b580ZSvf/IMG-20250429-WA0002.jpg" alt="סוויטת הורים" class="w-full h-36 object-cover gallery-img">
+                    <div class="absolute bottom-2 right-2 image-overlay-text text-white px-2 py-1 rounded-md text-[10px] font-bold">סוויטת הורים</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-gray-900 text-center">מה הלקוחות מספרים</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="testimonial-card p-6 rounded-xl shadow-md text-right">
-                    <div class="flex text-gold mb-3 justify-end">★★★★★</div>
-                    <p class="text-gray-700 mb-4 italic leading-relaxed">"יסמין ליוותה אותנו במכירת הדירה בקרית מוצקין. היא מקצועית, אמינה ותמיד זמינה לכל שאלה. בזכותה סגרנו עסקה מעל המחיר שציפינו."</p>
-                    <div class="font-bold text-gray-900">— משפחת לוי, קרית מוצקין</div>
-                </div>
-                <div class="testimonial-card p-6 rounded-xl shadow-md text-right">
-                    <div class="flex text-gold mb-3 justify-end">★★★★★</div>
-                    <p class="text-gray-700 mb-4 italic leading-relaxed">"חיפשנו דירה להשקעה בקריות ולא ידענו מאיפה להתחיל. יסמין עזרה לנו למצוא את הנכס המושלם וליוותה אותנו עד החתימה. מומלצת בחום!"</p>
-                    <div class="font-bold text-gray-900">— רוני כהן, חיפה</div>
-                </div>
-                <div class="testimonial-card p-6 rounded-xl shadow-md text-right">
-                    <div class="flex text-gold mb-3 justify-end">★★★★★</div>
-                    <p class="text-gray-700 mb-4 italic leading-relaxed">"שירות יוצא דופן! יסמין היא לא רק יועצת נדל"ן, היא שותפה לדרך. הבינה בדיוק מה אנחנו מחפשים ומצאה לנו את בית חלומותינו בקרית ביאליק."</p>
-                    <div class="font-bold text-gray-900">— ענת ויוסי שגב, קרית ביאליק</div>
-                </div>
-            </div>
-        </div>
+    <!-- Small CTA Bar -->
+    <section class="bg-slate-900 text-white py-12 px-6 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold italic opacity-90">"נכס איכותי ונדיר במרכז נהריה - למי שמחפש רמה אחרת של מגורים"</h2>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-900 text-white text-right">
-        <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-16 items-center">
-                <div class="md:w-1/2">
-                    <h2 class="text-4xl font-bold mb-6">רוצים לדעת כמה הנכס שלכם שווה?</h2>
-                    <p class="text-gray-400 text-xl mb-8 leading-relaxed">מחפשים את בית חלומותיכם בקריות? <br>השאירו פרטים ואחזור אליכם בהקדם לייעוץ מקצועי ואישי.</p>
-                    <div class="space-y-4 border-t border-white/10 pt-8">
-                        <a href="tel:0509004297" class="block text-3xl font-bold text-gold hover:text-white transition">050-9004297</a>
-                        <a href="mailto:hayasmin76@gmail.com" class="block text-xl text-gray-300 hover:text-gold transition">hayasmin76@gmail.com</a>
+    <!-- Contact Form & Details -->
+    <section id="contact" class="py-16 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10 bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-50">
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-slate-800">בואו לראות מקרוב</h2>
+                <p class="text-gray-600 mb-8 text-lg font-light">אשמח לתאם לכם סיור אישי בנכס ולהציג לכם את הדירה והאיזור המבוקש שבו היא שוכנת.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center group">
+                        <div class="bg-blue-100 p-4 rounded-xl ml-4 text-blue-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase tracking-tight">לתיאום מהיר</p>
+                            <a href="tel:0509004297" class="text-2xl font-bold text-blue-900">050-9004297</a>
+                        </div>
                     </div>
-                </div>
-                <div class="md:w-1/2 w-full">
-                    <div id="formContainer" class="bg-white p-8 rounded-3xl text-gray-900 shadow-2xl relative overflow-hidden text-right">
-                        <div class="absolute top-0 right-0 w-2 h-full bg-gold"></div>
-                        <form id="contactForm" onsubmit="handleSubmit(event)" class="space-y-5">
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1 text-right">שם מלא</label>
-                                <input type="text" name="name" required 
-                                    class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 outline-none transition-all focus:border-gold focus:ring-2 focus:ring-gold/20 text-right" 
-                                    placeholder="ישראל ישראלי">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-1 text-right">טלפון</label>
-                                <input type="tel" name="phone" required 
-                                    class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 outline-none transition-all focus:border-gold focus:ring-2 focus:ring-gold/20 text-right" 
-                                    placeholder="050-0000000">
-                            </div>
-                            <button type="submit" 
-                                class="w-full bg-gold text-white font-bold py-4 rounded-xl shadow-lg hover:bg-[#B8962E] transition-all transform hover:-translate-y-1 text-lg uppercase tracking-wide">
-                                שלח פנייה
-                            </button>
-                        </form>
-                    </div>
-
-                    <div id="successMessage" class="hidden mt-6 p-8 bg-white text-gray-900 rounded-3xl text-center shadow-2xl border-t-4 border-gold">
-                        <div class="text-gold text-5xl mb-4">✓</div>
-                        <h3 class="text-2xl font-bold mb-2">תודה!</h3>
-                        <p class="text-gray-600">הפרטים נשלחו בהצלחה, נהיה בקשר בקרוב.</p>
+                    <div class="flex items-center">
+                        <!-- Profile Image -->
+                        <div class="ml-4 profile-img-container">
+                             <img src="https://i.ibb.co/kVjwZHqL/image.png" alt="יסמין - נציגת הנכס" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase tracking-tight">נציגת הנכס: יסמין</p>
+                            <a href="https://wa.me/972509004297" class="text-lg font-bold text-green-700 flex items-center">
+                                שלחו הודעה בוואטסאפ
+                                <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <form onsubmit="handleSubmit(event)" class="bg-slate-50 p-6 rounded-3xl space-y-4 border border-gray-200">
+                <p class="font-bold text-slate-800 text-xl mb-2 text-center">נחזור אליכם בהקדם</p>
+                <input type="text" id="name" placeholder="שם מלא" required class="w-full p-4 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                <input type="tel" id="phone" placeholder="מספר טלפון" required class="w-full p-4 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 shadow-lg transition duration-300">
+                    קבלת פרטים נוספים
+                </button>
+                <div id="successMsg" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-xl text-center border border-green-200 font-bold">
+                    ✨ הפרטים נשלחו בהצלחה!
+                </div>
+            </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-10 bg-gray-950 text-gray-500 text-center border-t border-white/5 px-6">
-        <div class="flex justify-center mb-6">
-             <img src="https://i.ibb.co/6JV63YMT/logo.png" alt="לוגו שמול נדלן" class="footer-logo" onerror="this.style.display='none'">
+    <!-- Footer with Logo -->
+    <footer class="py-12 bg-slate-950 text-white text-center flex flex-col items-center">
+        <div class="mb-6">
+            <img src="https://i.ibb.co/Y4zfsfc8/logo.png" alt="לוגו הנכס" class="h-20 w-auto opacity-90">
         </div>
-        <p class="mb-2">© 2024 יסמין חיים - שמול נדל"ן | משה גושן 72, קרית מוצקין</p>
+        <p class="text-slate-500 text-sm">© 2024 - יסמין שיווק נכסי יוקרה</p>
     </footer>
 
     <script>
-        async function handleSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            const btn = form.querySelector('button');
-            const originalBtnText = btn.innerHTML;
-            
-            btn.innerHTML = "שולח...";
-            btn.disabled = true;
-
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            
-            // מפתח הגישה המעודכן שסיפקת
-            object.access_key = "afe50576-d790-4a46-bb31-da73eb5c78cd"; 
-            object.subject = "פנייה חדשה מדף הנחיתה - יסמין חיים";
-
-            try {
-                const response = await fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json", Accept: "application/json" },
-                    body: JSON.stringify(object)
-                });
-                
-                if (response.status === 200) {
-                    document.getElementById('formContainer').classList.add('hidden');
-                    document.getElementById('successMessage').classList.remove('hidden');
-                } else {
-                    throw new Error();
-                }
-            } catch (error) {
-                alert("תקלה בשליחה. אנא נסי שוב.");
-                btn.innerHTML = originalBtnText;
-                btn.disabled = false;
-            }
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('successMsg').classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                document.getElementById('successMsg').classList.add('hidden');
+            }, 5000);
         }
     </script>
 </body>
